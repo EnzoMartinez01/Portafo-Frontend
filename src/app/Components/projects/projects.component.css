@@ -1,0 +1,166 @@
+.section-1 {
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  max-width: 1200px;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+.section-2, .section-3 {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: auto;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease-in-out;
+  h2 {
+    padding: 0 110px;
+    font-size: 2rem;
+  }
+}
+
+.home-section-brands {
+  font-family: "Red Hat Display", serif;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  background: #141518;
+}
+
+.product-container {
+  background: #0b0e15;
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+::ng-deep .p-carousel {
+  width: 80%;
+  margin: auto;
+}
+
+.product-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.font-medium {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px !important;
+}
+
+.font-semibold {
+  text-align: left;
+  color: #f7f7f7;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.product-name {
+  font-size: clamp(0.8rem, 4vw, 1.2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.price-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+::ng-deep .p-button {
+  background: var(--primary-color) !important;
+  color: #f7f7f7 !important;
+  width: 100% !important;
+  padding: 10px;
+}
+
+::ng-deep .p-button:hover {
+  color: #3d61ae !important;
+}
+
+.justify-between {
+  text-align: center;
+}
+
+.names-container {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.language-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    i {
+      font-size: 25px;
+    }
+  }
+}
+
+.view-info {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 10px;
+  bottom: 10px;
+  &:hover {
+    background: var(--primary-hover);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    max-width: 300px;
+    height: auto;
+    display: grid;
+    align-items: center;
+    margin: auto;
+  }
+}

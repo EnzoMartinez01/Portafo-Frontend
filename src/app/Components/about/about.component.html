@@ -1,0 +1,135 @@
+<section class="section-1">
+  <div class="section-1-container">
+    <div class="section-1-image">
+      <img src="https://i.imgur.com/HTimnxD.png" alt="Imagen de la sección 1">
+    </div>
+    <div class="section-1-content">
+      <div class="nav-buttons">
+        <button (click)="setActiveSection('about')" [class.active]="activeSection === 'about'">Sobre Mí</button>
+        <button (click)="setActiveSection('experience')" [class.active]="activeSection === 'experience'">Experiencia</button>
+        <button (click)="setActiveSection('education')" [class.active]="activeSection === 'education'">Educación</button>
+        <button (click)="setActiveSection('skills')" [class.active]="activeSection === 'skills'">Conocimientos</button>
+      </div>
+      <div class="info-content">
+        <div *ngIf="activeSection === 'about'" @fadeAnimation>
+          <h2>Sobre Mí</h2>
+          <p>
+            Soy un desarrollador Fullstack especializado en Java y Spring Boot en el backend, con un alto conocimiento en Angular para el frontend.
+            Me apasiona construir aplicaciones robustas, escalables y eficientes, combinando lo mejor de ambas tecnologías para ofrecer soluciones modernas e innovadoras.
+          </p>
+          <p>
+            Cuento con experiencia en el desarrollo de aplicaciones empresariales, gestión de bases de datos SQL y generación de reportes en Excel y CSV.
+            Me especializo en la arquitectura de software, asegurando un código limpio, mantenible y escalable.
+          </p>
+          <p>
+            Manejo metodologías ágiles como Scrum y Kanban, lo que me permite trabajar de manera organizada en equipos multidisciplinarios.
+            También tengo experiencia en integración de APIs RESTful y consumo de servicios en el desarrollo de software.
+          </p>
+          <p>
+            Estoy en constante aprendizaje, explorando nuevas tecnologías y mejores prácticas en el desarrollo de software.
+            Me motiva enfrentar desafíos técnicos y encontrar soluciones innovadoras que optimicen el rendimiento de las aplicaciones.
+          </p>
+          <p>
+            Además de mi interés por la tecnología, disfruto resolver problemas complejos, mejorar procesos y colaborar con equipos que buscan la excelencia.
+            Me gusta compartir conocimientos y aprender de otros profesionales en la industria.
+          </p>
+        </div>
+
+        <div *ngIf="activeSection === 'experience'" @fadeAnimation>
+          <h2>Experiencia</h2>
+          <p>He trabajado en proyectos de gestión de fondos, generación de reportes financieros y automatización de procesos.</p>
+
+          <div class="experience-item">
+            <h3>INNOVATION CLEVERLY</h3>
+            <p><strong>Desarrollador Backend</strong></p>
+            <p>Lima, Perú | Jul 2024 – Dic 2024</p>
+            <ul>
+              <li>Desarrollo de soluciones Backend.</li>
+              <li>Realización de pruebas unitarias y funcionales.</li>
+              <li>Manejo de lenguaje Java - Spring Boot.</li>
+              <li>Realización de maquetación de Base de Datos SQL Server.</li>
+              <li>Creación de flujo funcional a nivel Backend - Base de Datos.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>NL SOLUTIONS TI</h3>
+            <p><strong>Desarrollador FullStack</strong></p>
+            <p>Lima, Perú | Ago 2023 – Jun 2024</p>
+            <ul>
+              <li>Desarrollo de soluciones Backend - Frontend a nivel funcional.</li>
+              <li>Manejo de lenguajes de programación (Java - React - Angular).</li>
+              <li>Manejo de bases de datos relacionales SQL Server - MySQL.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>IP INFOOUT</h3>
+            <p><strong>Soporte Técnico de Equipos de Cómputo</strong></p>
+            <p>Lima, Perú | Jul 2022 – Jun 2024</p>
+            <ul>
+              <li>Soporte técnico al personal administrativo, aulas y laboratorios de cómputo.</li>
+              <li>Mantenimiento preventivo y correctivo.</li>
+              <li>Efectuar y reportar la lista de verificación.</li>
+              <li>Detectar, registrar y dar solución a las fallas por hardware o software.</li>
+              <li>Realizar el inventario de equipos y software.</li>
+            </ul>
+          </div>
+        </div>
+        <div *ngIf="activeSection === 'education'" @fadeAnimation>
+          <h2>Educación</h2>
+          <p>Graduado en Ingeniería de Software con especialización en desarrollo backend y arquitectura de software.</p>
+
+          <div class="education-item">
+            <h4>INSTITUTO SUPERIOR TECNOLÓGICO CERTUS</h4>
+            <p><strong>Diseño y Desarrollo de Software</strong></p>
+            <p>Lima, Perú | Mar 2021 - Dic 2023</p>
+          </div>
+
+          <h3>CERTIFICACIONES</h3>
+          <div class="education-item">
+            <h4>ORACLE ONE</h4>
+            <p><strong>Formación Java y Spring Boot G5 - ONE</strong></p>
+            <p><a href="https://app.aluracursos.com/degree/certificate/e17ded34-1a2a-4598-bca0-a57c23dafdb6" target="_blank">Enlace de Certificación</a></p>
+            <p>Lima, Perú | 82 horas | 2023</p>
+          </div>
+          <div class="education-item">
+            <h4>UNIVERSIDAD NACIONAL DE INGENIERÍA</h4>
+            <p><strong>CLOUD COMPUTING: AWS - AZURE - GOOGLE CLOUD</strong></p>
+            <p><a href="https://app.aluracursos.com/degree/certificate/e17ded34-1a2a-4598-bca0-a57c23dafdb6" target="_blank">Enlace de Certificación</a></p>
+            <p>Lima, Perú | 24 horas | 2025</p>
+          </div>
+        </div>
+
+        <div *ngIf="activeSection === 'skills'" @fadeAnimation>
+          <h2>Conocimientos</h2>
+          <div class="skills-container">
+            <div class="skill"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="skill"><i class="fa-brands fa-angular"></i> Angular</div>
+            <div class="skill"><i class="fa-solid fa-leaf"></i> Spring Boot</div>
+            <div class="skill"><i class="fa-brands fa-react"></i> React</div>
+            <div class="skill"><i class="fa-solid fa-database"></i> SQL Server</div>
+            <div class="skill"><i class="fa-brands fa-windows"></i> C#</div>
+            <div class="skill"><i class="fa-brands fa-php"></i> PHP</div>
+            <div class="skill"><i class="fa-solid fa-file-code"></i> Swagger</div>
+            <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill"><i class="fa-solid fa-list-check"></i> Scrum</div>
+            <div class="skill"><i class="fa-solid fa-columns"></i> Kanban</div>
+          </div>
+
+          <h3>Habilidades Blandas</h3>
+          <div class="soft-skills-container">
+            <p-chip label="Trabajo en equipo" icon="pi pi-users"/>
+            <p-chip label="Resolución de problemas" icon="pi pi-cog" />
+            <p-chip label="Adaptabilidad" icon="pi pi-sync" />
+            <p-chip label="Comunicación efectiva" icon="pi pi-comments" />
+            <p-chip label="Autodidacta" icon="pi pi-book" />
+            <p-chip label="Proactividad" icon="pi pi-bolt" />
+            <p-chip label="Gestión del tiempo" icon="pi pi-clock" />
+            <p-chip label="Pensamiento analítico" icon="pi pi-chart-bar" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

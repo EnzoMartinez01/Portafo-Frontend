@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="header-logo" routerLink="/">
+    <h1>Enzo Martinez</h1>
+    <p>Portafolio</p>
+  </div>
+
+  <div class="menu-toggle" (click)="toggleMenu()" *ngIf="isMobile">
+    <span [class.open]="menuOpen"></span>
+    <span [class.open]="menuOpen"></span>
+    <span [class.open]="menuOpen"></span>
+  </div>
+
+  <nav class="header-content" *ngIf="!isMobile">
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active"><i class="pi pi-home"></i> Home</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active"><i class="pi pi-folder"></i> Proyectos</a></li>
+      <li><a routerLink="/about" routerLinkActive="active"><i class="pi pi-user"></i> Sobre mí</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active"><i class="pi pi-phone"></i> Contacto</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile-menu" [class.open]="menuOpen" *ngIf="isMobile">
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()"><i class="pi pi-home"></i> Home</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()"><i class="pi pi-folder"></i> Proyectos</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"><i class="pi pi-user"></i> Sobre mí</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"><i class="pi pi-phone"></i> Contacto</a></li>
+    </ul>
+  </nav>
+</header>

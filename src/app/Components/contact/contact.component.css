@@ -1,0 +1,121 @@
+.section-1 {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #090d18;
+  color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section-1-contact {
+  overflow: hidden;
+  form {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.section-1-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f7f7f7;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #f7f7f7;
+}
+
+input, textarea {
+  background: #090d18;
+  color: #f7f7f7;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #3d61ae;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #3d61ae;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #3d61ae;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #15337a;
+}
+
+/* 🌍 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .section-1 {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .section-1-header h2 {
+    font-size: 20px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-1 {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .section-1-header h2 {
+    font-size: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

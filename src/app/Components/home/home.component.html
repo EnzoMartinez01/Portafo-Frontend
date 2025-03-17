@@ -1,0 +1,128 @@
+<section class="slider">
+  <div class="section-1">
+    <div class="section-1-image">
+      <img ngSrc="https://i.imgur.com/HTimnxD.png" alt="Imagen de la sección 1" height="496" width="350">
+    </div>
+    <div class="section-1-content">
+      <h2>Hola, soy Enzo Martinez</h2>
+      <p>Soy un desarrollador Fullstack especializado en Java y Spring Boot
+        en el backend, con un alto conocimiento en Angular para el frontend.
+        Me apasiona construir aplicaciones robustas, escalables y eficientes,
+        combinando lo mejor de ambas tecnologías para ofrecer soluciones modernas e innovadoras.</p>
+      <button class="btn-details" routerLink="/about">Conoceme más</button>
+    </div>
+  </div>
+</section>
+<section class="section-2">
+  <div class="section-2-header">
+    <h2>Habilidades Técnicas</h2>
+  </div>
+  <div class="section-2-content">
+    <p-splitter styleClass="mb-8">
+      <ng-template #panel>
+        <div class="flex items-center justify-center h-full panel-header">
+          <div class="flex flex-col items-center justify-center icon">
+            <i class="pi pi-fw pi-home"></i>
+          </div>
+          <h3>Backend</h3>
+          <p>Me apasiona diseñar sistemas robustos y eficientes, construyendo la lógica detrás de cada aplicación. Disfruto optimizando procesos y asegurando que todo funcione a la perfección detrás de escena.
+          </p>
+        </div>
+        <div class="panel-medium">
+          <h3>Lenguajes y/o Framework que manejo</h3>
+          <p>Java, Spring Boot, C#, .NET, Php, Laravel</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Herramientas que utilizo</h3>
+          <ul>
+            <li>IntelliJ IDEA</li>
+            <li>VS Code</li>
+            <li>Visual Studio</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>SQL Server</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+      </ng-template>
+      <ng-template #panel>
+        <div class="flex items-center justify-center h-full panel-header">
+          <div class="flex flex-col items-center justify-center icon">
+            <i class="pi pi-fw pi-home"></i>
+          </div>
+          <h3>Frontend</h3>
+          <p>Me encanta crear interfaces intuitivas y atractivas, dando vida a las ideas en el navegador. Disfruto transformar conceptos en experiencias interactivas y fluidas para los usuarios.
+          </p>
+        </div>
+        <div class="panel-medium">
+          <h3>Lenguajes y/o Framework que manejo</h3>
+          <p>JavaScript, React, SCSS, TypeScript, Angular</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Herramientas que utilizo</h3>
+          <ul>
+            <li>WebStorm IDE</li>
+            <li>VS Code</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Bootstrap</li>
+            <li>PrimeNG</li>
+            <li>Notion</li>
+          </ul>
+        </div>
+      </ng-template>
+    </p-splitter>
+  </div>
+</section>
+
+<section class="section-3">
+  <div class="section-3-content">
+    <h2>Habilidades blandas</h2>
+    <div class="card flex items-center gap-2 flex-wrap icon-container">
+      <p-chip label="Trabajo en equipo" icon="pi pi-users"/>
+      <p-chip label="Resolución de problemas" icon="pi pi-cog" />
+      <p-chip label="Adaptabilidad" icon="pi pi-sync" />
+      <p-chip label="Comunicación efectiva" icon="pi pi-comments" />
+      <p-chip label="Autodidacta" icon="pi pi-book" />
+      <p-chip label="Proactividad" icon="pi pi-bolt" />
+      <p-chip label="Gestión del tiempo" icon="pi pi-clock" />
+      <p-chip label="Pensamiento analítico" icon="pi pi-chart-bar" />
+    </div>
+  </div>
+</section>
+
+<section class="section-4">
+  <div class="section-4-content">
+    <div class="flex flex-col items-center justify-center">
+      <h2>Conoce algunos de mis proyectos</h2>
+      <p>Explora algunos de los proyectos en los que he trabajado.</p>
+    </div>
+    <div class="flex flex-wrap justify-center carousel-container">
+      <p-carousel [value]="projects" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [autoplayInterval]="10000" [showIndicators]="true" [showNavigators]="true">
+        <ng-template let-project pTemplate="item">
+          <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4 product-container">
+            <div class="mb-4">
+              <div class="w-48 h-48 flex items-center justify-center bg-white rounded overflow-hidden img-container">
+                <img [src]="project.image" [alt]="project.title" class="product-image" />
+              </div>
+            </div>
+            <div class=" mb-4 font-medium product-name">{{ project.title }}</div>
+            <div class="flex justify-between items-center names-container">
+              <div class="mt-0 font-semibold text-xl ">{{ project.description }}</div>
+              <div class="price-content" *ngIf="project.programmingLanguage?.length">
+                <div class="language-container">
+                <span *ngFor="let lang of project.programmingLanguage" class="language-item">
+                  <i [ngClass]="getLanguageIcon(lang.name)"></i> {{ lang.name }}
+                </span>
+                </div>
+                <button class="view-info" (click)="openProject(project.link)">
+                  <i class="pi pi-github"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</section>
